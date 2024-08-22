@@ -1,0 +1,833 @@
+body{
+  background-color: #212529;
+}
+.dropdown-toggle::after {
+  display: none;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+.nav-item {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 5px;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+  visibility: hidden; /* Add this line */
+}
+
+.nav-link:hover::after {
+  transform: translateY(-5px);
+  animation: dot-move 0.4s infinite;
+  visibility: visible; /* Add this line */
+}
+
+
+@keyframes dot-move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.dropdown-menu {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #A9A9A9;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.start {
+  list-style-type: none;
+}
+
+.end {
+  text-decoration: none;
+  color: white;
+}
+#panel {
+  padding: 50px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300%;
+
+  background-color:  #A020F0;
+  border: solid 1px #c3c3c3;
+  z-index: 1000; /* add this to make sure the panel is on top of the navbar */
+}
+.hide-navbar {
+  display: none;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  margin-top: 40px;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+.animated-image {
+  animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.below-image {
+  position: relative;
+  top: -20%; /* move 20% upward */
+}
+.wheel-image {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.bi-arrow-up-right:hover {
+  color: red;
+  transform: scale(1.5); /* increase size by 50% */
+}
+.zoom-out {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+  transform-origin: center;
+}
+.dropdown-menu {
+  display: none; /* Hidden initially */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:  #212529; /* Set background color to black */
+  border: 1px solid #ddd;
+  border-top: 3px solid red; /* Add a red top border */
+  padding: 10px;
+  overflow: hidden;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: white; /* Set text color to white */
+}
+
+.dropdown-menu a:hover {
+  color: #23527c; /* Change the hover color as needed */
+}
+/* Style for the specific dropdown menu to be hidden by default */
+/* Style for the dropdown menu to be hidden by default */
+#home-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: black;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: max-content; /* Adjust width to fit content */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Show the dropdown menu on hover of both the link and the dropdown itself */
+.nav-link:hover + #home-dropdown,
+#home-dropdown:hover {
+  display: block;
+}
+
+/* Style the dropdown menu list to display items horizontally */
+#home-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display items in a horizontal row */
+}
+
+/* Style each item in the dropdown menu */
+#home-dropdown li {
+  margin-right: 10px; /* Space between images */
+}
+
+/* Ensure images fit well */
+#home-dropdown img {
+  display: block;
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+.animated-text {
+  position: relative;
+  top: -100px; /* Adjust as needed for the starting position */
+  opacity: 0;
+  transition: top 1s ease-out, opacity 1s ease-out;
+}
+
+/* This will be added via JavaScript to trigger the animation */
+.animate {
+  top: 0;
+  opacity: 1;
+}
+#box{
+  border: 2px solid white;
+}
+
+
+/* Optional: Change text color on hover */
+.owl-carousel .item:hover i,
+.owl-carousel .item:hover p {
+  color: white; /* Change the text color on hover */
+}
+.content {
+  flex: 1;
+  padding: 20px;
+  /* Your content styling here */
+}
+
+.footer-sidebar {
+  width: 60px;
+ /* Adjust width as needed */
+  background-color: #212529; /* Background color for the sidebar */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* Make it stick to the side */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  flex-direction: column; /* Stack items vertically */
+  padding-top: 20px; /* Add some top padding */
+}
+
+.footer-sidebar .item {
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column-reverse; /* Reverse the order: text first, icon second */
+  margin-bottom: 20px; /* Add some spacing between the items */
+}
+
+.footer-sidebar .item i {
+  font-size: 24px;
+  transform: rotate(270deg); /* Rotate the icon if needed */
+  margin-top: 5px;
+}
+
+.footer-sidebar .item p {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  writing-mode: vertical-rl; /* Make text vertical */
+  transform: rotate(180deg); /* Rotate text so it reads bottom to top */
+}
+.movingImage {
+   
+  animation:  moveUpDown 1s infinite;
+}
+.accordion-button {
+  background-color: #212529; /* Change background color to black */
+  color: white; /* Change text color to white */
+  border: none; /* Remove border */
+}
+
+.accordion-button:focus {
+  box-shadow: none; /* Remove focus outline */
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #212529; /* Slightly lighter black when expanded */
+}
+
+.accordion-item {
+  background-color: #212529; /* Change background color of the accordion item */
+  color: white; /* Change text color of the accordion item */
+  border: 1px solid #444; /* Add border with a slightly lighter color */
+}
+
+.accordion-body {
+  background-color: #212529; /* Change background color of the accordion body */
+  color: white; /* Change text color of the accordion body */
+}
+.accordion-button {
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  text-align: left;
+  padding-left: 20px; /* Adjust this value as needed */
+  padding-right: 20px; /* Ensure some space on the right */
+  gap: 20px; /* Space between text and span */
+}
+
+
+.accordion-button::after {
+  display: none; /* Remove the arrow */
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.accordion-header {
+  cursor: pointer;
+}
+
+.accordion-button span {
+  margin-left: auto;
+  padding-left: 20px;
+  width: 50px;
+  text-align: right;
+}
+.hover-effect {
+  background-color: transparent; /* Keep background transparent */
+  display: inline-flex;
+  align-items: center;
+}
+
+.hover-effect span {
+  color: #dc3545; /* Initial color for text */
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition */
+}
+
+.hover-effect span svg path {
+  transition: stroke 0.3s; /* Smooth transition for icon color */
+}
+.tooltip-container {
+  position: relative; /* Ensure the tooltip is positioned relative to this container */
+  display: inline-block; /* Ensure container takes up only as much space as its content */
+}
+
+.tooltip-text {
+  position: absolute;
+  background-color: #dc3545; /* Red background for the tooltip */
+  color: white; /* Text color */
+  border-radius: 70%; /* Make the tooltip circle-shaped */
+  padding:  30px 20px; /* Adjust padding for better appearance */
+  font-size: 16px; /* Adjust font size */
+  text-align: center; /* Center the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  min-width: 120px; /* Minimum width to ensure it's large enough */
+  display: none; /* Hide by default */
+  pointer-events: none; /* Prevent the tooltip from interfering with mouse events */
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: opacity 0.2s ease; 
+}
+
+.tooltip-container:hover .tooltip-text {
+  display: block; /* Show tooltip on hover */
+  opacity: 1; /* Ensure full opacity */
+}
+.new{
+    font-size: 70px;
+
+    font-family: 'Arial Black', Gadget, sans-serif;
+    font-size: 5rem;
+    color: #212529;
+    text-shadow: 0px 0px 3px #dc3545,
+                0px 0px 3px #dc3545,
+                0px 0px 3px #dc3545;
+}
+.rounded-button {
+  background-color:#212529;
+  color: white;
+  border: 2px solid white; /* Added white border */
+  border-radius: 25px; /* Keeps the rounded corners */
+  padding: 10px 20px;  /* Adjust padding as needed */
+  font-size: 1rem;     /* Adjust font size as needed */
+  cursor: pointer;
+}
+
+.rounded-button:hover {
+  background-color: #333; /* Darker shade of black for hover effect */
+  border-color: white;    /* Ensures border color stays white on hover */
+}
+#image-container {
+  overflow: hidden;
+}
+
+#image-container img {
+  transition: all 1s ease;
+  transform-origin: center;
+}
+
+#image-container:hover img {
+  transform: scale(1.5);
+}
+.zoom-container {
+  position: relative;
+  overflow: hidden; /* Ensures the image and arrow don't overflow the container */
+}
+
+.zoom-container img {
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease; /* Smooth zoom transition */
+}
+
+.zoom-container:hover img {
+  transform: scale(0.8); /* Zoom out the image */
+  transform-origin: center; /* Ensure the zoom focuses on the center */
+}
+
+#anchorText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(100%);
+  opacity: 0;
+  font-size: 2rem; /* Adjust size of the arrow as needed */
+  color: white; /* Set arrow color (can be changed to suit your design) */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.zoom-container:hover #anchorText {
+  transform: translate(-50%, -50%) translateY(0);
+  opacity: 1;
+}
+/* Left side text */
+#leftText {
+  position: absolute;
+  max-width: 400px;
+  background-color: rgba(192,192,192,0.3);
+  top: 90%;
+  left: 10px; /* Adjust position as needed */
+  transform: translateY(-50%);
+  opacity: 0;
+  color: white; /* Customize text color */
+  transition: opacity 0.5s ease; /* Smooth transition */
+  z-index: 2; /* Ensure it's in front of the image */
+}
+
+.zoom-container:hover #leftText {
+  opacity: 1;
+}
+#diagonalDiv {
+  display: inline-block;
+  transform: rotate(-45deg); /* Ensures the text alignment remains unaffected */
+}
+#diagonalDiv:hover {
+  color: red !important;
+}
+#move {
+  width: 100%;
+  overflow: hidden; /* Hide content that overflows */
+  position: relative;
+  background-color: #212529; /* Optional: Background color for the carousel */
+  padding: 10px 0;
+}
+
+.carousel-wrapper {
+  display: flex;
+  width: calc(200%); /* Ensure enough width to cover both original and duplicated items */
+  white-space: nowrap;
+  animation: moveText 15s linear infinite;
+}
+
+.text {
+  font-size: 5rem;
+  color: white;
+  display: inline-block;
+  margin-right: 50px; /* Space between items */
+  white-space: nowrap;
+}
+
+@keyframes moveText {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+  .repeated-content button {
+    background-color: white; /* Default background color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 80px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  .repeated-content:hover button {
+    background-color: #ff9500; /* Change background color on hover */
+  }
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fade-in-left {
+    animation: fadeInLeft 2s ease-in-out;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .arrow-icon {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .progress-bar {
+    background-color: red!important;
+  }
+  .progress-circles {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .progress-circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .progress-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(
+      red 0% 75%,   /* Red color for the progress */
+      white 75% 100% /* White color for the background */
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .progress-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 1; /* Ensure the text is above the ::before element */
+  }
+  
+  .progress-circle::before {
+    content: "";
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #212529;
+    position: absolute;
+  }
+  
+  .progress-text {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+    .custom-button {
+      background-color: red; /* Red background color */
+      color: white; /* White text color */
+      border: none; /* Remove border */
+      padding: 10px 20px; /* Add padding */
+      font-size: 16px; /* Font size */
+      font-weight: bold; /* Bold text */
+      border-radius: 5px; /* Rounded corners */
+      cursor: pointer; /* Pointer cursor on hover */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    }
+    
+    .custom-button:hover {
+      background-color: white; /* Background color on hover */
+      color: black; /* Text color on hover */
+    }
+  /* Ensure that the container takes up the full width and aligns items in a single line */
+  .info {
+    padding: 15px 0;
+     /* Optional: Adds a separator line between rows */
+  }
+  .team-details {
+    text-align: right;
+    color: white;
+  }
+  .hov:hover{
+  background-color: grey;
+  padding: 10px;
+  }
+  .team-photo {
+    position: absolute;
+    width: 150px; /* Set the width for the image */
+    right: -200px; /* Start off the screen to the right */
+    top: 50%; /* Center vertically within the parent */
+    transform: translateY(-50%); /* Center vertically */
+    transition: right 5s ease-in-out; /* Animate the right property */
+    z-index: 1000; /* Ensure the image appears above other content */
+    visibility: hidden; /* Initially hidden */
+  }
+  
+  /* Show the image and animate its entrance on hover */
+  #hov:hover .team-photo {
+    visibility: visible;
+    right: 0; /* Move the image to the original position */
+  }
+  
+ 
+    .price {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .plan {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .features li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
+    
+    .features li .check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: orange;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .features li .check::before {
+      content: '\f00c'; /* Font Awesome checkmark */
+      font-family: FontAwesome;
+      font-size: 12px;
+      color: white;
+    }
+    
+    .button {
+      background-color: #212529;
+    
+      color: white;
+      padding: 15px 30px;
+      border: 1px solid white;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .button:hover {
+      background-color: #f58220;
+    }
+    
+    .button .arrow {
+      margin-left: 10px;
+  }
+  .card {
+    background-color: #212529;
+    border: none;
+    /*border-radius: 10px;*/
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}
+
+.quote {
+    font-size: 1.2rem;
+    color: white;
+}
+.author {
+    font-size: 1.5rem;
+    font-weight: bold;  
+    color: white;
+}
+.title {
+    font-style: italic;
+    color: #888;
+    color: white;
+}
+.testimonial-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: inline-block;   
+    margin-right: 100px;
+}
+.quote-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.quotes {
+    color: #ff4d4d;
+    font-size: 2rem;
+    margin-left: -10px; /* Adjust this value to control the exact position */
+}
+
+.text {
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+}
+.bold {
+  font-weight: bold;
+}
+.old {
+  color: #212529;
+  text-shadow: 0px 0px 2px white,
+               0px 0px 2px white,
+               0px 0px 2px white;
+}
+.arr-container {
+  position: relative;
+  display: inline-block;
+}
+.arr {
+  font-size: 100px;
+  color: red;
+  position: absolute;
+  left: 40%; /* Adjust position as needed */
+  top: 40%;
+  transform: translateY(-20%);
+  opacity: 0; /* Hide the arrow initially */
+  transition: opacity 0.3s; /* Smooth transition */
+}
+.arr-container:hover .arr {
+  opacity: 1; /* Show the arrow on hover */
+}
+.col-md-2 {
+  text-align: center;
+}
+.col-md-2 svg {
+  height: 50px;
+  width: 50px;
+}
+.col-md-2 span {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 10px;
+}
+input[type="text"] {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #fff;
+}
+.btn {
+  background-color: #ffA500;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn i {
+  margin-left: 10px;
+}
+li:hover{
+  color: red;
+}
+.footer-icons {
+  display: flex;
+  justify-content: flex-end; /* Align icons to the right */
+  gap: 20px; /* Add space between icons */
+}
+.footer-icons i {
+  font-size: 24px; /* Adjust the size of icons as needed */
+}
